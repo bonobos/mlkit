@@ -203,5 +203,6 @@ class Validator(object):
                            index=['KS-test', 'KW-test', 'Pe-test'],
                            columns=test_schema)
         validation = test.data_description.append([arr])
-        validation.to_csv(
-            os.path.join(self.model_path, 'validation_check.csv'), index=True)
+        if self.model_path is not None:
+            validation.to_csv(
+                os.path.join(self.model_path, 'validation_check.csv'), index=True)

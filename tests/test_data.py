@@ -22,7 +22,7 @@ class TestData(TestBase):
 
         v = Validator(
             data_obj=data,
-            model_path='examples',
+            model_path=None,
             n_samples=100
         )
         v.run_validation(test=data)
